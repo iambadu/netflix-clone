@@ -39,6 +39,7 @@ display:flex;
 justify-content: space-between;
 align-items:center;
 padding: 18px 30px 15px;
+user-select:none;
 
 `;
 export const HeaderText = styled.h3`
@@ -50,7 +51,8 @@ export const Body = styled.div`
 border-top: 2px solid #000;
 background-color: #303030;
 padding: 30px;
-
+user-select:none;
 
 `;
-
+let Accord = {Body, Item, HeaderText, Header, Title, ItemWrap, Wrap};
+export default Accord;
