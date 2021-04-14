@@ -7,29 +7,29 @@ export default function FooterContainer() {
             <Footer.Text>Got Questions? Contact us</Footer.Text>
             <Footer.Row>
                 <Footer.Column>
-                    <Footer.Link >FAQ</Footer.Link>
-                    <Footer.Link >Help Center</Footer.Link>
-                    <Footer.Link >Account</Footer.Link>
-                    <Footer.Link >Media Center</Footer.Link>
-                    <Footer.Link >Investor Relations</Footer.Link>
+                    <Footer.Link href="#">FAQ</Footer.Link>
+                    <Footer.Link href="#">Help Center</Footer.Link>
+                    <Footer.Link href="#">Account</Footer.Link>
+                    <Footer.Link href="#">Media Center</Footer.Link>
+                    <Footer.Link href="#">Investor Relations</Footer.Link>
                 </Footer.Column>
                 <Footer.Column>
-                    <Footer.Link >Jobs</Footer.Link>
-                    <Footer.Link >Redeem Gift Cards</Footer.Link>
-                    <Footer.Link >Buy Gift Cards</Footer.Link>
-                    <Footer.Link >Ways to Watch</Footer.Link>
+                    <Footer.Link href="#">Jobs</Footer.Link>
+                    <Footer.Link href="#">Redeem Gift Cards</Footer.Link>
+                    <Footer.Link href="#">Buy Gift Cards</Footer.Link>
+                    <Footer.Link href="#">Ways to Watch</Footer.Link>
                 </Footer.Column>
                 <Footer.Column>
-                    <Footer.Link >Terms of Use</Footer.Link>
-                    <Footer.Link >Privacy</Footer.Link>
-                    <Footer.Link >Cookie Preferences</Footer.Link>
-                    <Footer.Link >Corporate Information</Footer.Link>
+                    <Footer.Link href="#">Terms of Use</Footer.Link>
+                    <Footer.Link href="#">Privacy</Footer.Link>
+                    <Footer.Link href="#">Cookie Preferences</Footer.Link>
+                    <Footer.Link href="#">Corporate Information</Footer.Link>
                 </Footer.Column>
                 <Footer.Column>
-                    <Footer.Link >Contact Us</Footer.Link>
-                    <Footer.Link >Speed Test</Footer.Link>
-                    <Footer.Link >Legal Notices</Footer.Link>
-                    <Footer.Link >Netflix Originals</Footer.Link>
+                    <Footer.Link href="#">Contact Us</Footer.Link>
+                    <Footer.Link href="#">Speed Test</Footer.Link>
+                    <Footer.Link href="#">Legal Notices</Footer.Link>
+                    <Footer.Link href="#">Netflix Originals</Footer.Link>
                 </Footer.Column>
             </Footer.Row>
         </Footer>

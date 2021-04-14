@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import rfs from '../../../utils/rfs'
 
 export const Wrap = styled.div`
   display: flex;
@@ -8,6 +9,7 @@ export const Wrap = styled.div`
   max-width: 1100px;
   margin:auto;
   width: 100%;
+  
 
   @media (max-width: 1000px) {
     flex-direction: column;
@@ -18,30 +20,22 @@ export const Side = styled.div`
   width:50%;
 
   @media (max-width: 1000px) {
+    padding: 0 ${rfs(45)};
     width: 100%;
-    padding: 0 45px;
     text-align: center;
   }
 `;
 
 export const Title = styled.h1`
-  font-size: 3.125rem;
+  font-size: ${rfs(55)};
     line-height: 1.1;
     margin-bottom: .5rem;
-
-  @media (max-width: 600px) {
-    font-size: 30px;
-  }
 `;
 
 export const SubText = styled.h2`
-  font-size: 24px;
+  font-size: ${rfs(24)};
   font-weight: normal;
   line-height: normal;
-
-  @media (max-width: 600px) {
-    font-size: 18px;
-  }
 `;
 
 export const Img = styled.div`
