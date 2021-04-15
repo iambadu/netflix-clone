@@ -1,6 +1,6 @@
 export default function rfs(prvVal) {
     let factor = 10;
-    let base_value = 1;
+    let base_value = 1.25;
     let rem_value = 16;
     let breakpoint = 1200;
 

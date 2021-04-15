@@ -46,7 +46,8 @@ align-items: center;
 @media (max-width: 768px) {
 justify-content: center;
     margin-top: 15px;
-    padding: 14px 25px;
+    padding: 8px 25px;
+    font-size:18px;
     max-width: 300px;
     margin: 15px auto 0; 
 }

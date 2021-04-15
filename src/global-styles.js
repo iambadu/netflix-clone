@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
+
 export const GlobalStyles = createGlobalStyle`
   *, *:before, *:after {
     box-sizing: border-box;
@@ -12,5 +13,7 @@ export const GlobalStyles = createGlobalStyle`
     background-color: #000000;
     color: #333333;
     font-size: 16px;
+    padding:0;
+    margin:0;
     /* overflow-x:hidden; */
 }`;

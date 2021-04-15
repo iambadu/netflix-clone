@@ -1,17 +1,27 @@
 import HmHead from './styles/homeheader';
+import { ReactComponent as Logo } from '../../utils/logo.svg';
+import HomeButton from './homebutton';
+
 
 export default function HomeHeader() {
     return (
         <HmHead.Container>
             <HmHead.TopHeader>
-                <HmHead.Logo></HmHead.Logo>
-                <HmHead.Button></HmHead.Button>
+                <HmHead.Logo>
+                    <Logo />
+                </HmHead.Logo>
+                <HmHead.Button>Sign In</HmHead.Button>
             </HmHead.TopHeader>
-            <HmHead.Lead>
-                <HmHead.LeadTitle></HmHead.LeadTitle>
-                <HmHead.LeadSubTitle></HmHead.LeadSubTitle>
-            </HmHead.Lead>
-            <HmHead.ImgWrap></HmHead.ImgWrap>
+            <HmHead.LeadWrap>
+                <HmHead.Lead>
+                    <HmHead.LeadTitle>Unlimited movies, TV shows, and more.</HmHead.LeadTitle>
+                    <HmHead.LeadSubTitle>Watch anywhere. Cancel anytime.</HmHead.LeadSubTitle>
+                </HmHead.Lead>
+                <HomeButton />
+            </HmHead.LeadWrap>
+            <HmHead.ImgWrap>
+                <HmHead.Img src="/images/misc/home-bg.jpg" />
+            </HmHead.ImgWrap>
         </HmHead.Container>
     )
 }
