@@ -1,17 +1,24 @@
-import Accordion from './components/accordion/accordion';
-import Feature from './components/feature';
-import Footer from './components/footer';
-import HomeHeader from './components/homelead/homeheader';
+import { Browse, Home, Signin, Signup } from './pages';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 function App() {
   return (
-    <>
-    <HomeHeader/>
-    <Feature/>
-    <Accordion/>
-    <Footer/>
-    </>
+    <Router>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route exact path="/browse">
+        <Browse/>
+      </Route>
+      <Route exact path="/signin">
+        <Signin/>
+      </Route>
+      <Route exact path="/signup">
+        <Signup/>
+      </Route>
+    </Router>
+
   );
 }
 
