@@ -3,7 +3,11 @@ import { ReactComponent as Logo } from '../../utils/logo.svg';
 import HomeButton from './homebutton';
 
 
-export default function HomeHeader() {
+export function Homelead() {
+    
+}
+
+export default function HomeHeader({page = false, children}) {
     return (
         <HmHead.Container>
             <HmHead.TopHeader>
