@@ -4,16 +4,16 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { GlobalStyles } from './global-styles';
 import { firebase } from './lib/firebase.prod';
-import {FireContext} from './context/fireContext';
+import { FirebaseContext } from './context/fireContext';
 
 
 
 ReactDOM.render(
   <>
-  <FireContext value={firebase}>
-    <GlobalStyles />
-    <App />
-  </FireContext>
+    <FirebaseContext.Provider value={firebase}>
+      <GlobalStyles />
+      <App />
+    </FirebaseContext.Provider>
   </>,
   document.getElementById('root')
 );

@@ -1,18 +1,4 @@
-import {useContext, createContext} from 'react';
+import {createContext} from 'react';
 
-let Context = createContext(null)
+export const FirebaseContext = createContext(null);
 
-function FireContext({children, value}) {
-    return(
-<Context.Provider value={value}>
-    {children}
-</Context.Provider>
-    )
-}
-
-function useFirebase() {
-    let useFire = useContext(Context);
-    return useFire;
-}
-
-export {FireContext, useFirebase};

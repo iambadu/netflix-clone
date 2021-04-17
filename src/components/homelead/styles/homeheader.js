@@ -39,6 +39,7 @@ const Button = styled.button`
 }
 display: inline-block;
 color: #fff;
+cursor: pointer;
 border:none;
 height: fit-content;
 font-weight: 500;
