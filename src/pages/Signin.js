@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useContext } from 'react';
+import { Link} from 'react-router-dom';
 
 import Footer from "../components/footer";
 import HomeHeader from "../components/homelead/homeheader";
@@ -11,16 +11,28 @@ export default function Signin() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-
-   
+    
+    // let history = useHistory();
+    let firebase = useContext(FirebaseContext);
     let isInvalid = password === '' || email === '';
+
+    function handleSignin(evt) {
+        evt.preventDefault();
+
+        firebase.auth().signInWithEmailAndPassword(email, password)
+        // .then(() => history.push('/browse'))
+        .catch(function(error) {
+            setError(error.message)
+      
+    });
+    }
     return (
         <>
             <HomeHeader page={true}>
                 <HForm.FWrap>
                     <HForm.Title>Sign In</HForm.Title>
                     {error && <HForm.Error>{error}</HForm.Error>}
-                    <HForm.WrpForm onSubmit={(evt) => evt.preventDefault()}>
+                    <HForm.WrpForm onSubmit={handleSignin}>
                         <HForm.Input
                             type="text"
                             onChange={({ target }) => setEmail(target.value)}
