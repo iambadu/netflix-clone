@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react';
-import { Link} from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import Footer from "../components/footer";
 import HomeHeader from "../components/homelead/homeheader";
@@ -11,8 +11,8 @@ export default function Signin() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    
-    // let history = useHistory();
+
+    let history = useHistory();
     let firebase = useContext(FirebaseContext);
     let isInvalid = password === '' || email === '';
 
@@ -20,11 +20,11 @@ export default function Signin() {
         evt.preventDefault();
 
         firebase.auth().signInWithEmailAndPassword(email, password)
-        // .then(() => history.push('/browse'))
-        .catch(function(error) {
-            setError(error.message)
-      
-    });
+            .then(() => history.push('/browse'))
+            .catch(function (error) {
+                setError(error.message)
+
+            });
     }
     return (
         <>
@@ -35,10 +35,12 @@ export default function Signin() {
                     <HForm.WrpForm onSubmit={handleSignin}>
                         <HForm.Input
                             type="text"
+                            autoComplete="on"
                             onChange={({ target }) => setEmail(target.value)}
                             placeholder="Email Address" />
                         <HForm.Input
                             type="password"
+                            autoComplete="on"
                             onChange={({ target }) => setPassword(target.value)}
                             placeholder="Password" />
                         <HForm.Button disabled={isInvalid} type="submit">Sign In</HForm.Button>

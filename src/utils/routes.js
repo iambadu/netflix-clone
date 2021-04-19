@@ -5,25 +5,19 @@ export function RedirectUser({ loggedinPath, children, user, ...rest }) {
         <Route
             {...rest}
             render={() => {
-                if (!user) {
+                if (user) {
                     return children
-                } else if (user) {
-                    return (
-                        <Redirect
-                            to={{
-                                pathname: loggedinPath
-                            }}
-                        />
-                    )
+                } else {
+                    return (<Redirect to={{pathname: loggedinPath}} />)
                 }
-                return null
+                
             }}
         />
     )
 }
 
 
-export function ProtectedRoute({loggedOutPath, children, user, ...rest }) {
+export function ProtectedRoute({ loggedOutPath, children, user, ...rest }) {
     return (
         <Route
             {...rest}
@@ -31,7 +25,7 @@ export function ProtectedRoute({loggedOutPath, children, user, ...rest }) {
                 if (user) {
                     return children
                 } else {
-                    return(
+                    return (
                         <Redirect to={{
                             pathname: loggedOutPath,
                             state: { from: location }

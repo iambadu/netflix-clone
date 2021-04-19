@@ -1,19 +1,18 @@
 import HmHead from './styles/homeheader';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../utils/logo.svg';
 import HomeButton from './homebutton';
 
 
 export function Homelead() {
-    
-    
+
     return (
         <>
-                <HmHead.Lead>
-                    <HmHead.LeadTitle>Unlimited movies, TV shows, and more.</HmHead.LeadTitle>
-                    <HmHead.LeadSubTitle>Watch anywhere. Cancel anytime.</HmHead.LeadSubTitle>
-                </HmHead.Lead>
-                <HomeButton />
+            <HmHead.Lead>
+                <HmHead.LeadTitle>Unlimited movies, TV shows, and more.</HmHead.LeadTitle>
+                <HmHead.LeadSubTitle>Watch anywhere. Cancel anytime.</HmHead.LeadSubTitle>
+            </HmHead.Lead>
+            <HomeButton />
         </>
     )
 }
@@ -32,7 +31,7 @@ export default function HomeHeader({ page = false, children }) {
                 {children}
             </HmHead.LeadWrap>
             <HmHead.ImgWrap>
-                <HmHead.Img src="/images/misc/home-bg.jpg" />
+                <HmHead.Img home={true} src="/images/misc/home-bg.jpg" />
             </HmHead.ImgWrap>
         </HmHead.Container>
     )

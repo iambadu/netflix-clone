@@ -1,9 +1,11 @@
 import styled from 'styled-components/macro';
 import rfs from '../../../utils/rfs';
 
+
+const gradient = "linear-gradient(to top,rgba(0,0,0,.8) 0,rgba(0,0,0,0) 60%,rgba(0,0,0,.8) 100%)";
 const Container = styled.section`
 position: relative;
-padding: 30px 0;
+padding: 20px 0;
 width:100%;
 @media (max-width: 1449px) {
     min-height: 100vh;
@@ -85,9 +87,10 @@ object-fit: cover;
 `;
 const ImgWrap = styled.div`
 &::before {
+    
     z-index: 1000;
-    background-color: rgba(0,0,0,.4);
-    background-image: linear-gradient(to top,rgba(0,0,0,.8) 0,rgba(0,0,0,0) 60%,rgba(0,0,0,.8) 100%);
+    background-color: ${({home}) => home ? 'rgba(0,0,0,.4)' : 'rgba(0,0,0,.6)'};
+    background-image: ${({home}) => home ? gradient : 'none' };
     position: absolute;
     content: "";
     top:0;
@@ -98,7 +101,7 @@ const ImgWrap = styled.div`
 }
 overflow:hidden;
 position: absolute;
-top: -100px;
+top: ${({home}) => home ? '-100px' : 0};
 bottom:0;
 left:0;
 content: "";

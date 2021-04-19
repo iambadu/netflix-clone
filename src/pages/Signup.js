@@ -26,7 +26,7 @@ export default function Signin() {
             .then((result) =>
                 result.user.updateProfile({
                     displayName: name,
-                    photoURL: Math.floor(Math.random * 5) + 1,
+                    photoURL: Math.floor(Math.random() * 5) + 1,
                 }).then(() => {
                     history.replace('/browse')
                 })
