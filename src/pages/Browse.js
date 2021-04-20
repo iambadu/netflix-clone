@@ -11,6 +11,7 @@ export default function Browse() {
    
     const firebase = useContext(FirebaseContext)
     const user = firebase.auth().currentUser || {};
+    const handleSignout = () => firebase.auth().signOut();
 
     // let { series } = useContent('series');
     // let { films } = useContent('films');
@@ -18,7 +19,7 @@ export default function Browse() {
 console.log(profile);
     return (
         profile.displayName
-            ? (<BrowseHome user={user}/>)
+            ? (<BrowseHome handleSignout={handleSignout} user={user}/>)
             : <Profile setProfile={setProfile} user={user} />
         )
 }

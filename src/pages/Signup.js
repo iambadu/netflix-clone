@@ -7,12 +7,13 @@ import HForm from "../components/siteform/styles/form";
 import {FirebaseContext} from "../context/fireContext";
 
 
-export default function Signin() {
-    const [email, setEmail] = useState('');
+export default function Signup(props) {
+    const [email, setEmail] = useState(props);
     const [password, setPassword] = useState('');
     const [name, setName] = useState('')
     const [error, setError] = useState('')
     
+    console.log(email);
     let history = useHistory();
 
     let firebase = useContext(FirebaseContext)

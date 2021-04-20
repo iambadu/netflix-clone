@@ -5,12 +5,11 @@ export function RedirectUser({ loggedinPath, children, user, ...rest }) {
         <Route
             {...rest}
             render={() => {
-                if (user) {
+                if (!user) {
                     return children
-                } else {
+                } else  {
                     return (<Redirect to={{pathname: loggedinPath}} />)
                 }
-                
             }}
         />
     )

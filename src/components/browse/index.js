@@ -2,7 +2,10 @@ import HmHead from '../homelead/styles/homeheader';
 import { ReactComponent as Logo } from '../../utils/logo.svg';
 import * as BHome from './styles/browse';
 
-export default function BrowseHome({user}) {
+export default function BrowseHome({user, handleSignout}) {
+    
+
+    
     return (
         <>
             <HmHead.Container>
@@ -10,9 +13,15 @@ export default function BrowseHome({user}) {
                     <HmHead.Logo>
                         <Logo />
                     </HmHead.Logo>
-                    <BHome.ProfileBtn>
-                        <BHome.Picture src={`/images/users/${user.photoURL}.png`}/>                       
-                    </BHome.ProfileBtn>
+                    <BHome.Profile>
+                        <BHome.ProfileImg src={`/images/users/${user.photoURL}.png`} />
+                        <BHome.ProfileWrp>
+                            <BHome.ProfileNme>{user.displayName}</BHome.ProfileNme>
+                            <BHome.ProfileBtn onClick={handleSignout}>Sign Out</BHome.ProfileBtn>
+                        </BHome.ProfileWrp>
+                    </BHome.Profile>
+
+
                 </HmHead.TopHeader>
                 <HmHead.LeadWrap>
                     <BHome.Wrap>
@@ -24,8 +33,7 @@ export default function BrowseHome({user}) {
                     </BHome.Wrap>
                 </HmHead.LeadWrap>
                 <HmHead.ImgWrap>
-                    <HmHead.Img
-                        home={false}
+                    <HmHead.Img home={false}
                         src="/images/misc/joker1.jpg"
                     />
                 </HmHead.ImgWrap>

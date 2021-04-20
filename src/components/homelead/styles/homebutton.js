@@ -40,6 +40,7 @@ font-size:26px;
 border:none;
 display: flex;
 align-items: center;
+cursor:pointer;
 .mdi-icon {
     padding-left:5px;
 }

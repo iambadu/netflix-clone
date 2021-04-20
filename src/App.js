@@ -6,7 +6,7 @@ import IsAuth from './hooks/isAuth';
 
 
 export default function App() {
-  let user = IsAuth();
+  let {user} = IsAuth();
   return (
     <Router>
       <RedirectUser path="/signin" exact

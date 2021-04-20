@@ -2,6 +2,7 @@ import HForm from './styles/form';
 import {Link} from 'react-router-dom';
 
 export default function Form() {
+ 
     return (
         <HForm.FWrap>
             <HForm.Title>Sign Up</HForm.Title>
