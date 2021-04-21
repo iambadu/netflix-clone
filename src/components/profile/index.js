@@ -1,7 +1,5 @@
-import { useContext } from 'react';
 import { ReactComponent as Logo } from '../../utils/logo.svg';
 import P, { Picture } from './styles/profile';
-import { FirebaseContext } from '../../context/fireContext';
 
 
 export function ProfilePic({ src }) {

@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const Profile = styled.div`
 display:flex;
 background-color: #333;
-padding: 8px 18px;
+padding: 8px 10px;
 align-items: center;
 border-radius:5px;
 border: 2px solid #ffffff35;
@@ -20,6 +20,29 @@ font-size:13px;
 padding-bottom:5px;
 color:#fff;
 `;
+export const CatWrap = styled.div`
+display: flex;
+padding-left:15px;
+@media (max-width:550px) {
+padding-top:15px;
+}
+`;
+
+export const Category = styled.a`
+cursor:pointer;
+color: #fff;
+padding: 8px 16px;
+margin-right: 8px;
+text-decoration: none;
+border-radius: 3px;
+background-color:${({ linkbg }) => linkbg ? '#e50914' : 'none'} ;
+&:hover {
+    background-color: #e50914;
+    color:#fff;
+}
+
+`;
+
 export const ProfileWrp = styled.div`
 padding-left: 10px;
 display:flex;
@@ -31,6 +54,7 @@ background-color:#e50914;
 color:#fff;
 padding:5px 10px;
 border-radius:3px;
+cursor:pointer;
 
 &:focus {
     outline:0;

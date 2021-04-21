@@ -25,6 +25,11 @@ align-items: center;
 
 const Logo = styled.div`
 margin-right: auto;
+display:flex;
+align-items: center;
+@media (max-width: 550px) {
+    flex-direction:column;
+}
 & svg {
 height: 36px;
 width: 134px;
