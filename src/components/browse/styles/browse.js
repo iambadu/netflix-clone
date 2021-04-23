@@ -27,7 +27,18 @@ padding-left:15px;
 padding-top:15px;
 }
 `;
-
+export const BTopHeader = styled.div`
+position: relative;
+z-index:1500;
+max-width: 1400px;
+padding: 0 15px;
+@media (min-width: 1100px) {
+    padding: 0 56px;
+}
+margin: 0 auto;
+display: flex;
+align-items: center;
+`;
 export const Category = styled.a`
 cursor:pointer;
 color: #fff;
@@ -78,8 +89,13 @@ padding-bottom: 15px;
 margin-top: 2rem;
 `;
 export const Wrap = styled.div`
-padding-top: 45px;
-max-width: 1100px;
+position: relative;
+    z-index: 1500;
+    padding: 70px 25px;
+max-width: 1400px;
+@media (min-width: 1100px) {
+    padding: 70px 56px;
+}
 margin: auto;
 `;
 export const Button = styled.button`

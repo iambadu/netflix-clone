@@ -1,6 +1,6 @@
 import Accordion from "../components/accordion/accordion";
 import Feature from "../components/feature";
-import Footer from "../components/footer/footer";
+import Footer from "../components/footer";
 import HomeHeader, { Homelead } from "../components/homelead/homeheader";
 
 

@@ -1,5 +1,5 @@
 import HmHead from './styles/homeheader';
-import { useHistory } from 'react-router-dom';
+import {Link, useHistory } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../utils/logo.svg';
 import HomeButton from './homebutton';
 
@@ -23,7 +23,8 @@ export default function HomeHeader({ page = false, children }) {
         <HmHead.Container>
             <HmHead.TopHeader>
                 <HmHead.Logo>
-                    <Logo />
+                    <Link to='/'><Logo /></Link>
+                    
                 </HmHead.Logo>
                 {!page && <HmHead.Button onClick={() => history.push('/signin')} >Sign In</HmHead.Button>}
             </HmHead.TopHeader>

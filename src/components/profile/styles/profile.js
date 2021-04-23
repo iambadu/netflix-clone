@@ -14,7 +14,7 @@ margin: 0;
 const Container = styled.div`
 margin: auto;
 max-width: 1100px;
-padding: 20px 0;
+padding: 20px;
 display: flex;
 align-items: flex-start;
 flex-direction: column;
