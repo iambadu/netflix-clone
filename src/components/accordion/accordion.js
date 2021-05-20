@@ -1,4 +1,4 @@
-// Accordion color = 
+// Accordion color =
 import { useState } from 'react';
 import faqData from '../../data/faqs.json';
 
@@ -11,7 +11,6 @@ import HomeButton from '../homelead/homebutton';
 export function FaqItem({ data }) {
     const [toggl, setToggl] = useState(false);
     const { id, header, body } = data;
-    console.log(data);
     return (
         <Accord.Item key={id}>
             <Accord.Header onClick={() => setToggl(!toggl)}>

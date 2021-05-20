@@ -60,6 +60,10 @@ const LeadWrap = styled.div`
 position: relative;
 z-index: 1500;
 padding: 70px 45px;
+@media (max-width: 480px) {
+    padding-left: 15px;
+    padding-right:  15px;
+}
 
 `;
 
@@ -92,7 +96,7 @@ object-fit: cover;
 `;
 const ImgWrap = styled.div`
 &::before {
-    
+
     z-index: 1000;
     background-color: ${({home}) => home ? 'rgba(0,0,0,.4)' : 'rgba(0,0,0,.6)'};
     background-image: ${({home}) => home ? gradient : 'none' };

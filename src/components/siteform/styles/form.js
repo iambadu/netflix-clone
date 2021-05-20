@@ -8,8 +8,11 @@ height: fit-content;
 display: flex;
 flex-direction: column;
 max-width: 450px;
-
 padding:35px 65px;
+@media (max-width: 480px) {
+    padding-left: 30px;
+    padding-right:  30px;
+}
 margin: -50px auto 0 auto;
 color: #fff;
 

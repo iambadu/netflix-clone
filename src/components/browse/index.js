@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 import HmHead from '../homelead/styles/homeheader';
 import { ReactComponent as Logo } from '../../utils/logo.svg';
 import * as BHero from './styles/browse';
@@ -20,7 +22,8 @@ export default function BrowseHome({ slides, user, handleSignout }) {
             <HmHead.Container>
                 <BHero.BTopHeader>
                     <HmHead.Logo>
-                        <Logo />
+                    <Link to='/'><Logo /></Link>
+
                         <BHero.CatWrap>
                             <BHero.Category
                                 linkbg={category === 'series' ? true : false}
@@ -41,7 +44,7 @@ export default function BrowseHome({ slides, user, handleSignout }) {
 
 
                 </BHero.BTopHeader>
-                    <BHero.Wrap>
+                <BHero.Wrap>
                         <BHero.Title>Watch Joker now</BHero.Title>
                         <BHero.Text>
                             Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the world around him.
